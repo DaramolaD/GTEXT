@@ -1,5 +1,5 @@
 "use client";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import logo from "../../assets/GtextHoldingsLogo.png";
 import { BiMenu, BiX } from "react-icons/bi";
 import Button from "../atoms/Button";
@@ -12,29 +12,13 @@ const navAnimation = {
 };
 
 const Header = () => {
-  const [scrolling, setScrolling] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const { pathname } = useLocation();
   console.log("patheName", pathname);
 
-  //   const router = useRouter()
-  const handleScroll = () => {
-    if (window.scrollY > 50) {
-      setScrolling(true);
-    } else {
-      setScrolling(false);
-    }
-  };
   const toggleMobileMenu = () => {
     setMobileMenuOpen(!mobileMenuOpen);
   };
-
-  useEffect(() => {
-    window.addEventListener("scroll", handleScroll);
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
   const handleOnclick = () => {
     // router.push("/contact-us");
   };
