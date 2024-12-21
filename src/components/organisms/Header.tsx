@@ -87,9 +87,7 @@ const Header = () => {
           />
         </div>
         <BiMenu
-          className={`lg:hidden w-7 h-7 cursor-pointer ${
-            scrolling ? "text-black" : "text-white"
-          }`}
+          className="lg:hidden w-7 h-7 cursor-pointer text-black"
           onClick={toggleMobileMenu}
         />
       </div>
